@@ -30,4 +30,21 @@
   flex-grow: 1;
 }
 
+.topbar {
+  background-color: #FE938C;
+ height: 40%;
+  text-align: center;
+  color: white;
+  padding: 3em;
+}
+
+.whitetext{
+  color : white;
+  font-size: 5em;
+  font-family: 'Raleway';
+}
+
+.interfont{
+  font-family: 'Inter';
+}
 

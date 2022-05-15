@@ -5,6 +5,7 @@ import lotteryContract from '../blockchain/lottery'
 import styles from '../styles/Home.module.css'
 import 'bulma/css/bulma.css'
 
+
 export default function Home() {
   const [web3, setWeb3] = useState()
   const [address, setAddress] = useState()
@@ -145,34 +146,49 @@ export default function Home() {
         <title>Ether Lottery</title>
         <meta name="description" content="An Ethereum Lottery dApp" />
         <link rel="icon" href="/favicon.ico" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'></link>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'></link>
       </Head>
 
+
       <main className={styles.main}>
-        <nav className="navbar mt-4 mb-4">
-          <div className="container">
-            <div className="navbar-brand">
-              <h1>Ether Lottery</h1>
-            </div>
-            <div className="navbar-end">
-              <button onClick={connectWalletHandler} className="button is-link">Connect Wallet</button>
-            </div>
+        
+       
+        <div className={styles.topbar}> 
+          <div className="container block" >
+            
+             
+              <div  className={styles.whitetext}  >Ethereum Lottery</div>
+          
+          <div className='block'>
+          <p className='block'>Enter the lottery by sending 0.01 Ether</p>
+                  <button onClick={enterLotteryHandler} className="button is-black block">Play now</button>
+             
           </div>
-        </nav>
+               <div className='block'>
+               <button onClick={connectWalletHandler} className="button is-black block">Connect Wallet</button>
+            
+               </div>
+
+           
+          </div>
+          </div>    
+       
+
+
+        
         <div className="container">
           <section className="mt-5">
             <div className="columns">
               <div className="column is-two-thirds">
-                <section className="mt-5">
-                  <p>Enter the lottery by sending 0.01 Ether</p>
-                  <button onClick={enterLotteryHandler} className="button is-link is-large is-light mt-3">Play now</button>
-                </section>
+           
                 <section className="mt-6">
                   <p><b>Admin only:</b> Pick winner</p>
-                  <button onClick={pickWinnerHandler} className="button is-primary is-large is-light mt-3">Pick Winner</button>
+                  <button onClick={pickWinnerHandler} className="button  is-dark mt-3 ">Pick Winner</button>
                 </section>
                 <section className="mt-6">
                   <p><b>Admin only:</b> Pay winner</p>
-                  <button onClick={payWinnerHandler} className="button is-success is-large is-light mt-3">Pay Winner</button>
+                  <button onClick={payWinnerHandler} className="button  is-dark mt-3">Pay Winner</button>
                 </section>
                 <section>
                   <div className="container has-text-danger mt-6">
