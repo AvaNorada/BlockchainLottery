@@ -32,8 +32,8 @@ contract Lottery is VRFConsumerBase {
     }
 
     function fulfillRandomness(bytes32 requestId, uint randomness) internal override {
-        randomResult = randomness;
-    }
+       randomResult = randomness;
+   }
 
     function getWinnerByLottery(uint lottery) public view returns (address payable) {
         return lotteryHistory[lottery];
@@ -58,7 +58,7 @@ contract Lottery is VRFConsumerBase {
         getRandomNumber();
     }
 
-    function payWinner() public onlyOwner {
+    function payWinner() public onlyowner {
         require(randomResult > 0, "Must have a source of randomness before choosing winner");
         uint index = randomResult % players.length;
         players[index].transfer(address(this).balance);

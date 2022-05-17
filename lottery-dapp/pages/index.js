@@ -25,6 +25,7 @@ export default function Home() {
     if (lcContract) getPot()
     if (lcContract) getPlayers()
     if (lcContract) getLotteryId()
+    
   }
 
   const getPot = async () => {
@@ -80,6 +81,9 @@ export default function Home() {
         gas: 300000,
         gasPrice: null
       })
+      const winnerAddress = await lcContract.methods.lotteryHistory(lotteryId).call()
+     
+      updateState()
     } catch(err) {
       setError(err.message)
     }
@@ -161,7 +165,7 @@ export default function Home() {
               <div  className={styles.whitetext}  >Ethereum Lottery</div>
           
           <div className='block'>
-          <p className='block'>Enter the lottery by sending 0.01 Ether</p>
+          <p className='block'>Enter the lottery by sending 0.01001 Ether</p>
                   <button onClick={enterLotteryHandler} className="button is-black block">Play now</button>
              
           </div>

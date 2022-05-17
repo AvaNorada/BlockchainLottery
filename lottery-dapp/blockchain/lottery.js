@@ -4,7 +4,7 @@ const lotteryAbi = [{"inputs":[],"stateMutability":"nonpayable","type":"construc
 const lotteryContract = web3 => {
     return new web3.eth.Contract(
         lotteryAbi,
-        "0xDe989123620D655FDf510eF528bE40F14916f7D7"
+        "0x6f182B77E3e7F53749694152a02B278B3012Be84"
     )
 }
 

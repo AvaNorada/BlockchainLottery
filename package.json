@@ -1,5 +1,19 @@
 {
+"name": "lottery-dapp",
+"private" : true,
+
+"scripts": {
+"dev" : "next dev",
+"build" : "next build",
+"start": "next start",
+"lint": "next lint",
+"compile": "solcjs --abi --include-path node_modules/ --base-path . blockchain/contracts/Lottery.sol --output-dir blockchain/build"
+
+},
+
   "dependencies": {
-    "bulma": "^0.9.4"
+    "@truffle/hdwallet-provider": "^2.0.8",
+    "bulma": "^0.9.4",
+    "dotenv": "^16.0.1"
   }
 }
