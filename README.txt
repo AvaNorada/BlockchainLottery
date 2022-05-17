@@ -18,6 +18,7 @@ npm run dev
 
 Please refer to video demonstration on how to use the application
 
+NOTE: Since it is hardcoded on which wallet is the admin, the admin buttons PickWinner and PayWinner cannot be used, but the playgame and connect wallet button is usable.
 
 
 
